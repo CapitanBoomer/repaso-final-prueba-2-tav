@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-label>
+      usuario
+    </ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      contraseña
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="pass"></ion-input>
+  </ion-item>
+</ion-list>
+<ion-button (click)="validardatos()">ingresar</ion-button>
+</ion-content>

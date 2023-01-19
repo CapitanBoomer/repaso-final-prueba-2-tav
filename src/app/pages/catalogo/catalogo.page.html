@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>catalogo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let prod of servcat.catalogodatos?.products " [routerLink]="['/detalle']"[queryParams]="{id: prod.id}">
+  <img [src]="prod.images[0]" alt="">
+  <ion-card-title>{{prod.title}}</ion-card-title>
+  <ion-card-subtitle>{{prod.category}}</ion-card-subtitle>
+  <ion-card-content>
+    <ion-note>valoracion: {{prod.rating}}</ion-note>
+  <ion-note>precio: ${{prod.price}}</ion-note>
+  <ion-note>descuento: {{prod.discountPercentage}}%</ion-note>
+  </ion-card-content>
+descripcion: {{prod.description}}
+</ion-card>
+</ion-content>
